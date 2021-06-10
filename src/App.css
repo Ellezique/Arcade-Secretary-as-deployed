@@ -2,19 +2,63 @@
 /*   APP    */
 /*------------------------------------------------------------------*/
 
-
-
-
+* {
+    font-family: 'Roboto Mono', monospace;
+  }
+  
 
 /*//////////////////////////////////////////////////////////////////*/
 /*  NAVBAR   */
 /*------------------------------------------------------------------*/
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 80px;
+    font-size: 20px;
+    max-width: 100vw;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
 
+.navbar-container {
+    justify-content: left; 
+    text-decoration: none;
+    cursor: pointer;
+    height: 80px;
+    max-width: 1200px;
+}
 
+.logo-section {
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px; 
+    margin-left: 20px;
+    color: white;   
+}
+.typewriter {
+    
+}
 
+.fa-keyboard {
+    margin-left: 8px;
+}
 
+.fa-hamburger {
+    color: white;
+}
 
+.fa-gulp {
+    color: red;
+    font-size: 40px; 
+  }
+
+T.menu-icon {
+    display: none; 
+}
 /*//////////////////////////////////////////////////////////////////*/
 /*   HOME PAGE & GAME  */
 /*------------------------------------------------------------------*/
