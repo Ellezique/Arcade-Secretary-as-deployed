@@ -4,6 +4,7 @@ import generate from '../Util/WordList'
 import Start from '../Components/Start'
 import Intro from '../Components/Intro'
 import GameTimer from '../Components/GameTimer'
+import Finish from '../Components/Finish'
 
 const Home = () => {
     const initialWordCount=50
@@ -37,6 +38,7 @@ const Home = () => {
         if(gameStart==="start"){ 
             resetGame() 
           }
+          console.log("gameStart",gameStart)  
       },[gameStart]) 
 
     function getNextWord(){
@@ -44,10 +46,7 @@ const Home = () => {
         return wordList.current[Math.floor(Math.random()*wordList.current.length)] 
     }
 
-    useEffect(()=> {   
-        console.log("word list ",wordList.current)
-        console.log("current word",currentWord)
-        console.log("completed",completed)  
+    useEffect(()=> {    
         //if completed is right and not empty i.e. there is some letters been typed into it
         if(completed){ 
 
@@ -79,7 +78,7 @@ const Home = () => {
             return clearInterval(myInterval)  //to clear interval when App component unmount
             }, 1000)
         }
-      },[gameStart,gameTimer]) 
+      },[gameStart,gameTimer])  
 
     
 
@@ -88,10 +87,11 @@ const Home = () => {
             {!gameStart && <Intro setGameStart={setGameStart}/>}
             {gameStart==="start" && <>
             <GameTimer gameTimer={gameTimer}/>
-            <Start original={currentWord} completed={completed.toLowerCase()} />
+            <Start original={currentWord} completed={completed.toLowerCase()} /> 
             {/* <Input />
             <Score/> */}
             </>}
+            {gameStart==="finish" && <Finish setGameStart={setGameStart}/>}
 
             
        </div>
