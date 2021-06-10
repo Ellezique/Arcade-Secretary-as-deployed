@@ -3,7 +3,7 @@ import { useState, useEffect, useRef} from "react"
 import generate from '../Util/WordList'
 import Start from '../Components/Start'
 import Intro from '../Components/Intro'
-
+import GameTimer from '../Components/GameTimer'
 
 const Home = () => {
     const initialWordCount=50
@@ -16,6 +16,9 @@ const Home = () => {
 
     const [completed, setCompleted] = useState("")  // letters of the currentWord typed so far by the user 
 
+    const initialTimer=60
+    const [gameTimer, setGameTimer] = useState(initialTimer)
+
     function onKeyPress(e){
         const typedChar=String.fromCharCode(e.keyCode)
         setCompleted(completed => `${completed}${typedChar}`)
@@ -24,8 +27,16 @@ const Home = () => {
         window.addEventListener("keypress", onKeyPress)
         return ()=> window.removeEventListener("keypress", onKeyPress);
     },[])
+
+    function resetGame(){
+       //set score and accuracy here
+        setCompleted("")
+        setCurrentWord(initialCurrentWord)
+      }
     useEffect(()=>{
-        console.log(gameStart)
+        if(gameStart==="start"){ 
+            resetGame() 
+          }
       },[gameStart]) 
 
     function getNextWord(){
@@ -52,16 +63,36 @@ const Home = () => {
             }}
       },[completed])
 
+      useEffect(()=>{
+        // if game timer changed to "start", begin the count down
+        if(gameStart==="start"){ 
+          let myInterval=setInterval(() => {
+            if(gameTimer>0){
+             // console.log("game timer",gameTimer)
+              setGameTimer(gameTimer - 1) 
+            }
+            else{ //if the timer finished clear the interval, to stop it from counting down
+              clearInterval(myInterval) 
+              setGameStart("finish")
+              setGameTimer(initialTimer)
+            }   
+            return clearInterval(myInterval)  //to clear interval when App component unmount
+            }, 1000)
+        }
+      },[gameStart,gameTimer]) 
+
     
 
     return (
         <div>
             {!gameStart && <Intro setGameStart={setGameStart}/>}
             {gameStart==="start" && <>
+            <GameTimer gameTimer={gameTimer}/>
             <Start original={currentWord} completed={completed.toLowerCase()} />
             {/* <Input />
             <Score/> */}
             </>}
+
             
        </div>
       
