@@ -1,4 +1,6 @@
 import React from 'react'
+import scoring_system from './scoring_system.png'
+import './../App.css'
 
 function Rules() {
     return (

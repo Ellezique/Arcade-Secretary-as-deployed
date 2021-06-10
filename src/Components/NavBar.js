@@ -12,7 +12,7 @@ function NavBar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to='/' className="logo-section">
-                 <i className="typewriter" src="./typewriter.png"/>
+                 <img className="typewriter" src="./images/typewriter.png"/>
                   ARCADE 
                  <i class="far fa-keyboard"/> 
                 </Link>
