@@ -9,24 +9,7 @@
     padding: 0;
   }
   
- /*GAME ON HOME PAGE*/
-  .App {
-      font-family: sans-serif;
-      text-align: center;
-    }
-    .word {
-      font-size: 7rem;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-    .wait-char {
-      opacity: 0.4;
-    }
-    .red {
-      opacity: 1;
-      color: red;
-      text-decoration: line-through;
-    }
+
   
 /*//////////////////////////////////////////////////////////////////*/
 /*  NAVBAR   */
@@ -184,14 +167,63 @@
 /*   HOME PAGE & GAME  */
 /*------------------------------------------------------------------*/
 
-
+ /*GAME ON HOME PAGE*/
+  .App {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .word {
+      font-size: 7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .wait-char {
+      opacity: 0.4;
+    }
+    .red {
+      opacity: 1;
+      color: red;
+      text-decoration: line-through;
+    }
 
 
 /*//////////////////////////////////////////////////////////////////*/
 /*   RULES PAGE  */
 /*------------------------------------------------------------------*/
 
-
+.rules {
+    display: flex;
+    height:200px;
+    align-items: center;
+    justify-content: center;
+    font-size: 48rem;
+    background-position: center;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 100px;
+  }
+  /*Score Card*/
+  .scoring_system {
+    max-width: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+  }
+  
+  .paragraph {
+    background: white;
+    width: 80vw;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    
+  }
+  
 
 
 /*//////////////////////////////////////////////////////////////////*/

@@ -9,14 +9,16 @@ import Contact from './Pages/Contact';
 const App = () => {
   return (
     <div className="App">
+      <>
         <Router>
           <NavBar />
           <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path ='Rules' component={Rules} />
-            <Route path ='Contact' component={Contact} />
+            <Route exact path='/' component={Home} />
+            <Route path='/Rules' component={Rules} />
+            <Route path='/Contact' component={Contact} />
           </Switch>
         </Router> 
+      </>
     </div>
   )
 }
