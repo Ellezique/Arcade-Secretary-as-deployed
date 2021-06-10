@@ -5,9 +5,9 @@ return(
         { 
           props.original.split("").map((c, index) => {
             let className=""
-          if(props.completed[index]==undefined)
+          if(props.completed[index]===undefined)
             {className="wait-char"}
-          else if(props.completed[index]!=c)
+          else if(props.completed[index]!==c)
             {className="red"}
           return (
             <span key={index} className={className}>
