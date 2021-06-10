@@ -6,21 +6,19 @@ function NavBar() {
         <div>
             <h1>NAVBAR</h1>
             <ul>
-                <li>
-                    <Link>
+    
+                    <Link to="/">
                         HOME
                     </Link>
-                </li>
-                <li>
-                    <Link>
+
+                    <Link to="/rules">
                         RULES
                     </Link>
-                </li>
-                <li>
-                    <Link>
+         
+                    <Link to="/contact">
                         CONTACT
                     </Link>
-                </li>
+              
             </ul>
         </div>
     )
