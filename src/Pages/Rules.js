@@ -2,10 +2,12 @@ import React from 'react'
 
 function Rules() {
     return (
-        <div>
-            <h1>RULES</h1>
-        </div>
+        <>
+            <h1 style={{color:"black", fontSize:"64px"}}>RULES</h1>
+
+        </>
     )
 }
+
 
 export default Rules

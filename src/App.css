@@ -1,17 +1,20 @@
+* {
+  color: black;
+}
 .App {
-    font-family: sans-serif;
-    text-align: center;
-  }
-  .word {
-    font-size: 7rem;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-  .wait-char {
-    opacity: 0.1;
-  }
-  .red {
-    opacity: 1;
-    color: red;
-    text-decoration: line-through;
-  }
+  font-family: sans-serif;
+  text-align: center;
+}
+.word {
+  font-size: 7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.wait-char {
+  opacity: 0.1;
+}
+.red {
+  opacity: 1;
+  color: red;
+  text-decoration: line-through;
+}
