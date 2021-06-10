@@ -1,20 +1,224 @@
+/*//////////////////////////////////////////////////////////////////*/
+/*   APP    */
+/*------------------------------------------------------------------*/
+
 * {
-  color: black;
+    font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+  }
+
+.heading {
+    color: white;
+    font-size: 100px;
+    padding: 30px;
 }
-.App {
-  font-family: sans-serif;
-  text-align: center;
+
+.paragraph {
+    background: white;
+    width: 80vw;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: left;
+  }
+ 
+ .paragraph-container {
+     height: 100vh;
+     padding-top: 30px;
+     padding-bottom: 100vh;
+ }
+/*//////////////////////////////////////////////////////////////////*/
+/*   HOME PAGE & GAME  */
+/*------------------------------------------------------------------*/
+
+ /*GAME ON HOME PAGE*/
+  .App {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .word {
+      font-size: 7rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .wait-char {
+      opacity: 0.4;
+    }
+    .red {
+      opacity: 1;
+      color: red;
+      text-decoration: line-through;
+    }
+
+/*//////////////////////////////////////////////////////////////////*/
+/*   RULES PAGE  */
+/*------------------------------------------------------------------*/
+
+  /*Score Card*/
+  .scoring_system {
+    max-width: 100vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+  }
+  
+
+/*//////////////////////////////////////////////////////////////////*/
+/*  NAVBAR   */
+/*------------------------------------------------------------------*/
+
+.navbar {
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 100vw;
+    font-size:20px;
+    top: 0;
+    background: black;
+    color: white;
+    position: sticky;
 }
-.word {
-  font-size: 7rem;
-  font-weight: 900;
-  text-transform: uppercase;
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-width: 1200px;
 }
-.wait-char {
-  opacity: 0.1;
+
+.logo-section {
+    display: flex;
+    justify-content: left; 
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px; 
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
-.red {
-  opacity: 1;
-  color: red;
-  text-decoration: line-through;
+
+.logo-section:hover {
+    color: lightgrey;
 }
+
+/* .typewriter {
+    
+} */
+
+.fa-keyboard {
+    margin-left: 8px;
+    font-size: 30px;
+}
+
+/*hide burger-icon when outside mobile view*/
+.icon {
+    display: none; 
+}
+
+.fa-gulp {
+    font-size: 40px;
+    color: red;
+}
+
+.fa-hamburger {
+    color: white;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px; 
+    justify-content: right;
+    margin-right: 20px;
+    text-align: center;
+    list-style: none; 
+    width: 60vw; 
+}
+
+/* .nav-item {
+
+} */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    border: 3.5px solid white;
+    color: lightgrey;
+  }
+
+/*Mobile view*/
+@media screen and (max-width: 960px) {
+    .navbar {
+        position:relative;
+    }
+    
+    .nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s ease;
+    }
+    
+    .nav-menu.active {
+        z-index: 1;
+        left: 0;
+        background: #252525;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
+    
+    .nav-links:hover {
+        background-color: white;
+        color: #252525;
+    }
+
+    .logo-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%); 
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /*ADD OTHER MEDIA BREAKS INFO HERE*/
+    /* game word size on mobile */
+    .word {
+        font-size: 60px;
+    }
+}
+
+
+

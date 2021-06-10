@@ -1,26 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+import '../App.css';
 
 function NavBar() {
-    return (
-        <div>
-            <h1>NAVBAR</h1>
-            <ul>
-    
-                    <Link to="/">
-                        HOME
-                    </Link>
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
+    const closeBurgerMenu = () => setClick(false)
 
-                    <Link to="/rules">
-                        RULES
-                    </Link>
-         
-                    <Link to="/contact">
-                        CONTACT
-                    </Link>
-              
-            </ul>
-        </div>
+    return (
+        <>
+        <nav className="navbar">
+            <div className="navbar-container">
+                <Link to='/' className="logo-section">
+                 <img className="typewriter" src="./images/typewriter.png"/>
+                  ARCADE 
+                 <i class="far fa-keyboard"/> 
+                </Link>
+                <div className='icon' onClick={handleClick}>
+                    <i className={click ? 'fab fa-gulp' : 'fas fa-hamburger'} />
+                </div>
+                <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <li className='nav-item'>
+                        <Link to='/' className='nav-links' onClick={closeBurgerMenu}>
+                            HOME
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Rules' className='nav-links' onClick={closeBurgerMenu}>
+                            RULES
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/Contact' className='nav-links' onClick={closeBurgerMenu}>
+                            CONTACT
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </>
     )
 }
 
