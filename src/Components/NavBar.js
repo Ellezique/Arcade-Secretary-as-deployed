@@ -8,14 +8,15 @@ function NavBar() {
     const closeBurgerMenu = () => setClick(false)
 
     return (
+        <>
         <nav className="navbar">
             <div className="navbar-container">
                 <Link to='/' className="logo-section">
-                 <i className="typewriter" src="./public/typewriterlogo.png"/>
+                 <i className="typewriter" src="./typewriter.png"/>
                   ARCADE 
                  <i class="far fa-keyboard"/> 
                 </Link>
-                <div className='menu-icon' onClick={handleClick}>
+                <div className='icon' onClick={handleClick}>
                     <i className={click ? 'fab fa-gulp' : 'fas fa-hamburger'} />
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -37,6 +38,7 @@ function NavBar() {
                 </ul>
             </div>
         </nav>
+        </>
     )
 }
 

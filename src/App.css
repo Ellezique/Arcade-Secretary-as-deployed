@@ -4,9 +4,12 @@
 
 * {
     font-family: 'Roboto Mono', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
- 
+ /*GAME ON HOME PAGE*/
   .App {
       font-family: sans-serif;
       text-align: center;
@@ -17,7 +20,7 @@
       text-transform: uppercase;
     }
     .wait-char {
-      opacity: 0.1;
+      opacity: 0.4;
     }
     .red {
       opacity: 1;
@@ -30,53 +33,152 @@
 /*------------------------------------------------------------------*/
 
 .navbar {
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
     height: 80px;
-    font-size: 20px;
     max-width: 100vw;
-    z-index: 1000;
-    position: sticky;
+    font-size:20px;
     top: 0;
+    background: black;
+    color: white;
+    position: sticky;
+    margin-bottom: 50px;
 }
 
 .navbar-container {
-    justify-content: left; 
-    text-decoration: none;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80px;
     max-width: 1200px;
 }
 
 .logo-section {
+    display: flex;
+    justify-content: left; 
     align-items: center;
-    text-decoration: none;
-    font-size: 30px; 
     margin-left: 20px;
-    color: white;   
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
-.typewriter {
+
+.logo-section:hover {
+    color: lightgrey;
+}
+
+/* .typewriter {
     
-}
+} */
 
 .fa-keyboard {
     margin-left: 8px;
+    font-size: 30px;
+}
+
+/*hide burger-icon when outside mobile view*/
+.icon {
+    display: none; 
+}
+
+.fa-gulp {
+    font-size: 40px;
+    color: red;
 }
 
 .fa-hamburger {
     color: white;
 }
 
-.fa-gulp {
-    color: red;
-    font-size: 40px; 
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 30px; 
+    justify-content: right;
+    margin-right: 20px;
+    text-align: center;
+    list-style: none; 
+    width: 60vw; 
+}
+
+/* .nav-item {
+
+} */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    border: 3.5px solid white;
+    color: lightgrey;
   }
 
-T.menu-icon {
-    display: none; 
+/*Mobile view*/
+@media screen and (max-width: 960px) {
+    .navbar {
+        position:relative;
+    }
+    
+    .nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: 80px;
+    left: -100%;
+    transition: all 0.5s ease;
+    }
+    
+    .nav-menu.active {
+        z-index: 1;
+        left: 0;
+        background: #252525;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
+    
+    .nav-links:hover {
+        background-color: white;
+        color: #252525;
+    }
+
+    .logo-section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%, 50%);
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%); 
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /*ADD OTHER MEDIA BREAKS INFO HERE*/
+    /* game word size on mobile */
+    .word {
+        font-size: 60px;
+    }
 }
+
 /*//////////////////////////////////////////////////////////////////*/
 /*   HOME PAGE & GAME  */
 /*------------------------------------------------------------------*/
