@@ -1,7 +1,7 @@
 {
   "name": "arcade-secretary",
   "version": "0.1.0",
-  "homepage": "./",
+  "homepage": "/Arcade-Secretary",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
