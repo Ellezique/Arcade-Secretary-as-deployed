@@ -27,13 +27,15 @@ jobs:
       with:
         cmd: install # will run `yarn install` command
 
+    - name: Apply github creds
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+
     - name: Deploy
       uses: borales/actions-yarn@v2.0.0
       with:
-        cmd: |
-          git config --global user.name $user_name
-          git config --global user.email $user_email
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          deploy
+        cmd: deploy
         
       
