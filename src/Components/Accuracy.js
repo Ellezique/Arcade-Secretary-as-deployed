@@ -2,10 +2,10 @@ import React from 'react'
 
 const Accuracy = (props) => {
     return (
-        <div>
-            <p>Accuracy: {props.accuracy}</p>
+        <>
+            <p className="paragraph">Accuracy: {props.accuracy}</p>
             
-        </div>
+        </>
     )
 }
 

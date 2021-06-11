@@ -1,25 +1,29 @@
 import React from 'react'
+
 import '../App.css';
 
 function Contact() {
     return (
-        <div className="App" style={{ backgroundImage: "url('images/dont_grow_up.png')" }}>
+        <div >
             <h1 className="heading">CONTACT</h1>
                 <div className="paragraph-container">
-                    <p className="paragraph">
+                    <div className="container">
+
+                    <p className="paragraph" style={{color: "white"}}>
                         Arcade Secretary is brought to you by the very minds responsible for:
-                        <br></br> 
-                        <br></br> 
-                        https://github.com/robaElshazly
-                        <br></br>
-                        <br></br> 
-                        https://github.com/Ellezique
-                        <br></br>
-                        <br></br> 
-                        https://github.com/MrAjMann
                     </p>
+
+                    <p className="paragraph">
+                        <a href="https://github.com/robaElshazly">https://github.com/robaElshazly</a> 
+                    </p> 
+                    <p className="paragraph">
+                        <a href="https://github.com/Ellezique">https://github.com/Ellezique</a> 
+                    </p> 
+                    <p className="paragraph">
+                        <a href="https://github.com/MrAjMann">https://github.com/MrAjMann</a> 
+                    </p>     
+                    </div>
                 </div>
-    
         </div>
     )
 }

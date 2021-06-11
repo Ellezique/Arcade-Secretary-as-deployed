@@ -28,7 +28,7 @@ const Home = () => {
 
     const [completed, setCompleted] = useState("")  // letters of the currentWord typed so far by the user 
 
-    const initialTimer=10
+    const initialTimer=60
     const [gameTimer, setGameTimer] = useState(initialTimer)
 
     function onKeyPress(e){
@@ -126,9 +126,9 @@ const Home = () => {
     
 
     return (
-        <div>
+            <div className="wrapper" >    
             {!gameStart && <Intro setGameStart={setGameStart}/>}
-            {gameStart==="start" && <>
+            {gameStart==="start" && <div className="container">
             <GameTimer gameTimer={gameTimer}/>
             <Start original={currentWord} completed={completed.toLowerCase()} />
             <Accuracy accuracy={accuracy} />
@@ -136,13 +136,10 @@ const Home = () => {
             <Score score={score}/> 
             {/* <Input />
             <Score/> */}
-            </>}
-            {gameStart==="finish" && <Finish setGameStart={setGameStart} score={score} accuracy={accuracy} wordsPerMin={wordsPerMin}/>}
-
             
-       </div>
-      
-        
+            </div>}
+            {gameStart==="finish" && <Finish setGameStart={setGameStart} score={score} accuracy={accuracy} wordsPerMin={wordsPerMin}/>}
+            </div>
     )
 }
 
