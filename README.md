@@ -29,7 +29,8 @@ improve and chase deadline victories.
 ![Scoring System](docs/scoring_system.png)
 
 #### Play
-Arcade Secretary has been deployed on Netlify. You may play the game online.
+Arcade Secretary has been deployed on Netlify. You may play the game online:
+https://arcade-secretary.netlify.app
 
 #### Download
 You may also download the source code and play in development mode.
