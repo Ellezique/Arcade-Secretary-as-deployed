@@ -25,24 +25,42 @@
   margin-bottom: 50px;
 }
 a {
-  color: #000;
   font-family: "Roboto Mono", monospace;
   text-align: center;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .paragraph {
-  text-align: center;
+  text-align: left;
   padding: 10px;
   color: #000;
   /* text-align: left; */
 }
-.paragraph-container {
-  height: 100vh;
-  padding-top: 30px;
+.contactParagraph {
   text-align: center;
+  padding: 30px;
+  color: #000;
+
+  /* text-align: left; */
+}
+.contactLink {
+  color: rgba(44, 44, 44, 0.7);
+}
+.contactLink:hover {
+  color: rgb(8, 8, 8);
+  border: 5px solid black;
+  padding: 10px;
+}
+
+.paragraph-container {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+
   padding-bottom: 100vh;
 }
 /*//////////////////////////////////////////////////////////////////*/
