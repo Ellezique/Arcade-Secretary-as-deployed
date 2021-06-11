@@ -5,10 +5,7 @@
 --------
 
 #### Game Description 
-Arcade Secretary is a score-based speed typing game. Secretaries are
-armed with their keyboards and lighting reflexes when they enter the
-fast-paced corporate battlefield where speed and accuracy pave the way
-to victory!
+Arcade Secretary is a score-based speed typing game. Secretaries are armed with their keyboards and lighting reflexes when they enter the fast-paced corporate battlefield where speed and accuracy pave the way to victory!
 
 Secretaries are given a strict deadline during which they will be
 given words, which they must type and submit as quickly and as
@@ -30,6 +27,9 @@ improve and chase deadline victories.
 #### Rules 
 
 ![Scoring System](docs/scoring_system.png)
+
+#### Play
+Arcade Secretary has been deployed on Netlify. You may play the game online.
 
 #### Download
 You may also download the source code and play in development mode.

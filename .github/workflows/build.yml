@@ -1,0 +1,41 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Yarn CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env: 
+      CI: false
+      user_name: 'deploy-bot'
+      user_email: 'deploy-boot@users.noreply.github.com'
+      github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+      repository: 'Hack-Overflow-Team/Arcade-Secretary'
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install # will run `yarn install` command
+
+    - name: Apply github creds
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+
+    - name: Deploy
+      uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: deploy
+        
+      

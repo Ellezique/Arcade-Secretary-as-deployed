@@ -7,12 +7,13 @@ import Home from './Pages/Home';
 import Rules from './Pages/Rules';
 import Contact from './Pages/Contact';
 
+const getBasename = path => path.substr(0, path.lastIndexOf('/'));
 const App = () => {
   return (
     
     <div className="App" >
       <>
-        <Router>
+        <Router basename={getBasename(window.location.pathname)}>
           <NavBar />
           <Switch>
             <div  >
