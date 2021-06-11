@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       CI: false
-      user_name: 'github-actions[bot]'
-      user_email: 'github-actions[bot]@users.noreply.github.com'
+      user_name: 'deploy-bot'
+      user_email: 'deploy-boot@users.noreply.github.com'
       github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-      repository: ${{ github.repository }}
+      repository: 'Hack-Overflow-Team/Arcade-Secretary'
 
     steps:
     - uses: actions/checkout@v2
