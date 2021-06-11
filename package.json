@@ -1,7 +1,7 @@
 {
   "name": "arcade-secretary",
   "version": "0.1.0",
-  "homepage": "https://hack-overflow-team.github.io/",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
