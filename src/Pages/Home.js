@@ -127,10 +127,10 @@ const Home = () => {
   }, [gameStart, gameTimer]);
 
   return (
-    <div>
+    <div className="wrapper">
       {!gameStart && <Intro setGameStart={setGameStart} />}
       {gameStart === "start" && (
-        <>
+        <div className="container">
           <GameTimer gameTimer={gameTimer} />
           <Start original={currentWord} completed={completed.toLowerCase()} />
           <Accuracy accuracy={accuracy} />
@@ -138,7 +138,7 @@ const Home = () => {
           <Score score={score} />
           {/* <Input />
             <Score/> */}
-        </>
+        </div>
       )}
       {gameStart === "finish" && (
         <Finish
