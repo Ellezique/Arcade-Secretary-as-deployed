@@ -1,73 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the basic template.
+# ARCADE SECRETARY
+#### TEAM: HACK OVERFLOW
+#### Members: Roba, Gizelle, Anthony
 
-## What's in the basic template?
-- It includes node-sass, and a style.scss (and removes all .css files)
-- It doesn't use serviceWorker
-- It replaces the react favicon with a flower of life icon
+--------
 
-## Available Scripts
+#### Game Description 
+Arcade Secretary is a score-based speed typing game. Secretaries are armed with their keyboards and lighting reflexes when they enter the fast-paced corporate battlefield where speed and accuracy pave the way to victory!
 
-In the project directory, you can run:
+Secretaries are given a strict deadline during which they will be
+given words, which they must type and submit as quickly and as
+accurately as super-humanly possible.
 
-### `yarn start`
+Secretaries will be rewarded for accuracy and receive one point for
+each character that they typed correctly. Mistakes are a liability!
+If a secretary makes a mistake, they will not get a point for the
+incorrectly typed character.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Secretaries race against time! When time runs out, the last word will be discarded. The deadline is reached and the game ends. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Secretaries are then provided with a performance review which will
+include total score, WPM (words per minute) and
+average accuracy per character.
 
-### `yarn test`
+Secretaries are immortal and live to battle again, always seeking to
+improve and chase deadline victories.
+#### Rules 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Scoring System](docs/scoring_system.png)
 
-### `yarn build`
+#### Play
+Arcade Secretary has been deployed on Netlify. You may play the game online.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Download
+You may also download the source code and play in development mode.
+1. Make a fork of this repository.
+2. Clone your fork to your local development environment.
+3. Change to the project directory.
+4. Install dependencies: 
+`$ yarn install`
+5. Run the application: 
+`$ yarn start` 
+Runs the app in the development mode.Open [http://localhost:3000](http://localhost:3000) to view it in the browser.You are ready to play!
+#### Screenshots
+![Home](docs/homess.PNG)
+![Game](docs/gamess.PNG)
+![Burger menu](docs/navss.PNG)
+![Drop down menu](docs/nav2ss.PNG)
+![Rules](docs/rulesss.PNG)
+![Contact](docs/contactss.PNG)
+#### Thanks
+[Trello](https://trello.com/) was used for task management throughout this project.
+![Trello](docs/trelloss.PNG)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The background image is by Tyler Callahan and is available on [Unsplash](https://unsplash.com/photos/r0UNLHW_P58).
+![Background Image by Tyler Callahan](docs/dont_grow_up.png)
