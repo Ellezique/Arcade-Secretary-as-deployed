@@ -6,9 +6,9 @@ export default function Finish(props) {
     <div>
       <h1 className="heading">Finish</h1>
       <div className="container">
-        <p className="paragraph">Score: {props.score}</p>
-        <p className="paragraph">Accuracy: {props.accuracy}%</p>
-        <p className="paragraph">WMP: {props.wordsPerMin}</p>
+        <p className="contactParagraph">Score: {props.score}</p>
+        <p className="contactParagraph">Accuracy: {props.accuracy}%</p>
+        <p className="contactParagraph">WMP: {props.wordsPerMin}</p>
       </div>
       <button
         className="introButton"

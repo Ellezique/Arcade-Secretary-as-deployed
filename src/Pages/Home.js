@@ -29,7 +29,7 @@ const Home = () => {
 
   const [completed, setCompleted] = useState(""); // letters of the currentWord typed so far by the user
 
-  const initialTimer = 10;
+  const initialTimer = 60;
   const [gameTimer, setGameTimer] = useState(initialTimer);
 
   function onKeyPress(e) {
