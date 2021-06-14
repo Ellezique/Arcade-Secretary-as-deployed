@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Accuracy = (props) => {
-    return (
-        <>
-            <p className="paragraph">Accuracy: {props.accuracy}</p>
-            
-        </>
-    )
-}
+  return (
+    <>
+      <p className="contactParagraph">Accuracy: {props.accuracy}</p>
+    </>
+  );
+};
 
-export default Accuracy
+export default Accuracy;

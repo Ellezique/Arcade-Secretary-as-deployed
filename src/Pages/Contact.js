@@ -8,21 +8,21 @@ function Contact() {
       <h1 className="heading">CONTACT</h1>
       <div className="paragraph-container">
         <div className="container">
-          <p className="paragraph">
-            Arcade Secretary is brought to you by the very minds responsible
-            for:
-          </p>
+          <p className="paragraph">Arcade Secretary is brought to you by:</p>
 
+          <p style={{ fontWeight: "700" }}>Roba</p>
           <p className="contactParagraph ">
             <a className="contactLink" href="https://github.com/robaElshazly">
               https://github.com/robaElshazly
             </a>
           </p>
-          <p className="contactParagraph ">
+          <p style={{ fontWeight: "700" }}>Gizzelle</p>
+          <p className="contactParagraph">
             <a className="contactLink" href="https://github.com/Ellezique">
               https://github.com/Ellezique
             </a>
           </p>
+          <p style={{ fontWeight: "700" }}>Anthony</p>
           <p className="contactParagraph">
             <a className="contactLink" href="https://github.com/MrAjMann">
               https://github.com/MrAjMann

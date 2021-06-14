@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Score = (props) => {
-    return (
-        <div>
-            <p className="paragraph">Score: {props.score}</p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <p className="contactParagraph">Score: {props.score}</p>
+    </div>
+  );
+};
 
-export default Score
+export default Score;
