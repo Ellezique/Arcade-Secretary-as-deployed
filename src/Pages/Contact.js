@@ -16,7 +16,7 @@ function Contact() {
               https://github.com/robaElshazly
             </a>
           </p>
-          <p style={{ fontWeight: "700" }}>Gizzelle</p>
+          <p style={{ fontWeight: "700" }}>Gizelle</p>
           <p className="contactParagraph">
             <a className="contactLink" href="https://github.com/Ellezique">
               https://github.com/Ellezique
